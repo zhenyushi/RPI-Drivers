@@ -23,6 +23,21 @@ Raspberry Pi headless setup: https://hackernoon.com/raspberry-pi-headless-instal
 I2C need to be enabled: https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
 
 ## Relvant Issues
+WIFI setup:<br />
+- Add the following lines to `/etc/wpa_supplicant/wpa_supplicant.conf`:
+~~~
+network={
+ssid="MySSID"
+psk="MyPsk"
+key_mgmt=WPA-PSK
+}
+~~~~
+
+- Set WIFI connection to defult, change the couter line in `etc/network/interfaces` to:
+~~~
+auto wlan0
+~~~
+
 Show all connected I2C devices:
 ~~~
 $ sudo i2cdetect -y
