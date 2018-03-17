@@ -3,10 +3,19 @@ Sample codes for driving different hardware with Raspberry Pi
 
 ## Hardware
 Raspberry Pi Zero Wireless<br />
+- datasheet: https://cdn-learn.adafruit.com/downloads/pdf/introducing-the-raspberry-pi-zero.pdf
+
 PCA9685 I2C 16 Channels PWM driver (driving standard PWM servo)<br />
+- datasheet: https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf
+
 MPU 9250 9 Axes Accelerometer<br />
+- datasheet: https://www.invensense.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf
+
 TCA9548A 8 Channels I2C Multiplexer<br />
+- datasheet: http://www.ti.com/lit/ds/symlink/tca9548a.pdf
+
 28015 REV C PING))) Ultrasonic Distance Sensor<br />
+- datasheet: http://users.ece.utexas.edu/~valvano/Datasheets/PingDocs.pdf
 
 ## Software
 ### Raspberry Pi
