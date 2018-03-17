@@ -5,7 +5,7 @@ Sample codes for driving different hardware with Raspberry Pi
 Raspberry Pi Zero Wireless<br />
 - datasheet: https://cdn-learn.adafruit.com/downloads/pdf/introducing-the-raspberry-pi-zero.pdf
 
-PCA9685 I2C 16 Channels PWM driver (driving standard PWM servo)<br />
+PCA9685 I2C 16 Channels PWM driver<br />
 - datasheet: https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf
 
 MPU 9250 9 Axes Accelerometer<br />
