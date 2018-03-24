@@ -3,6 +3,10 @@
 import smbus2 as smbus
 import time
 import numpy as np
+import rospy
+
+from visualization_msgs.msg import Marker
+
 
 chan=1       # 0 for rev1 boards etc.
 bus = smbus.SMBus(chan)
@@ -39,7 +43,12 @@ def read_i2c_word(address,register):
 
 if __name__ == '__main__':
     
-    while(1):
+
+    rospy.init_node('talker', anonymous=True)
+    pub = rospy.Publisher('Visulization', Marker, queue_size=1)
+    rate = rospy.Rate(100) 
+
+    while not rospy.is_shutdown():
 
         x_read = read_i2c_word(address,ACCEL_XOUT0)
         y_read = read_i2c_word(address,ACCEL_YOUT0)
@@ -63,14 +72,45 @@ if __name__ == '__main__':
         curr_z /= 16350
 
 
-        if(1):
+        phi = np.arctan2(curr_y,curr_z)
+        theta = np.arcsin(curr_x)
+
+
+        if(0):
             print("x = ",curr_x)
             print("y = ",curr_y)
             print("z = ",curr_z)
+            
+
+        if(1):
+            print("Roll = ",phi)
+            print("Pitch = ",theta)
+            print(' ')
+
 
         if(0):
             print(x_read)
             print(y_read)
             print(z_read)
+
+        marker = Marker()
+        marker.header.frame_id = "map"
+        marker.type = marker.CUBE
+        marker.action = marker.ADD
+        marker.scale.x = 0.5
+        marker.scale.y = 0.5
+        marker.scale.z = 0.2
+        marker.color.a = 1.0
+        marker.color.r = 1.0
+        marker.color.g = 1.0
+        marker.color.b = 0.0
+
+        marker.pose.orientation.w = 1.0
+        marker.pose.position.x = 0
+        marker.pose.position.y = 0
+        marker.pose.position.z = 0
+
+
+        pub.publish(marker)
 
 
