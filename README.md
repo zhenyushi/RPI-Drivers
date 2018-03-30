@@ -21,7 +21,14 @@ TCA9548A 8 Channels I2C Multiplexer<br />
 ## Software
 ### Raspberry Pi
 Raspbian Jessie Lite<br />
-ROS
+ROS packages:<br />
+- rospy
+- roscpp
+- roslaunch
+- sensor_msgs
+- std_msgs
+- visualization_msgs
+- tf
 ### PC
 putty<br />
 Winscp<br />
