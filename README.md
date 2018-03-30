@@ -57,5 +57,11 @@ Show ip address:
 $ ifconfig
 ~~~
 
+Install smbus2:
+~~~
+$ sudo apt-get install -y python2-pip
+$ sudo pip install smbus2
+~~~
+
 To add new ros packages, follow the section 4.2 in this link:<br />
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
