@@ -37,7 +37,7 @@ Win32DiskImager<br />
 
 ## Relvant Links
 Raspberry Pi headless setup: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0 <br />
-I2C need to be enabled: https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+I2C setup: https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
 
 ## Relvant Issues
 WIFI setup:<br />
