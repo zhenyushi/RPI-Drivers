@@ -1,5 +1,5 @@
 # RPI_drivers
-Sample codes for driving different hardware with Raspberry Pi 
+Sample codes for driving different hardware with Raspberry Pi <br />
 The name of the original package is commu
 
 ## Hardware
@@ -43,11 +43,6 @@ key_mgmt=WPA-PSK
 }
 ~~~~
 
-- Set WIFI connection to defult, change the couter line in `etc/network/interfaces` to:
-~~~
-auto wlan0
-~~~
-
 Show all connected I2C devices:
 ~~~
 $ sudo i2cdetect -y
@@ -56,3 +51,11 @@ Make the scripts executable:
 ~~~
 $ chmod +x something.py
 ~~~
+
+Show ip address:
+~~~
+$ ifconfig
+~~~
+
+To add new ros packages, follow the section 4.2 in this link:<br />
+http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
