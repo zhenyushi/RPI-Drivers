@@ -74,5 +74,6 @@ To add new ros packages, follow the section 4.2 in this link:<br />
 http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Kinetic%20on%20the%20Raspberry%20Pi
 
 GPIO for Raspberry pi 3 and pi zero w:<br />
+(Source page: http://www.raspberry-pi-geek.com/howto/GPIO-Pinout-Rasp-Pi-1-Model-B-Rasp-Pi-2-Model-B)<br />
 ![raspib-gpio_lightbox](https://user-images.githubusercontent.com/24307076/38147871-11d1443e-3422-11e8-8ede-98b4535786e0.png)
 
