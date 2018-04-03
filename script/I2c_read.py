@@ -7,6 +7,7 @@ import rospy
 
 from visualization_msgs.msg import Marker
 
+import tf
 
 chan=1       # 0 for rev1 boards etc.
 bus = smbus.SMBus(chan)
@@ -73,7 +74,7 @@ if __name__ == '__main__':
 
 
         phi = np.arctan2(curr_y,curr_z)
-        theta = np.arcsin(curr_x)
+        theta = -1*np.arcsin(curr_x)
 
 
         if(0):
@@ -105,11 +106,20 @@ if __name__ == '__main__':
         marker.color.g = 1.0
         marker.color.b = 0.0
 
-        marker.pose.orientation.w = 1.0
-        marker.pose.position.x = 0
+
+
+
+
+        #marker.pose.orientation = tf.transformations.quaternion_from_euler(phi, theta, 0)
+        marker.pose.orientation.x =tf.transformations.quaternion_from_euler(phi, theta, 0)[0]
+        marker.pose.orientation.y =tf.transformations.quaternion_from_euler(phi, theta, 0)[1]
+        marker.pose.orientation.z =tf.transformations.quaternion_from_euler(phi, theta, 0)[2]
+        marker.pose.orientation.w =tf.transformations.quaternion_from_euler(phi, theta, 0)[3]
+
+
+        marker.pose.position.x = 1
         marker.pose.position.y = 0
         marker.pose.position.z = 0
-
 
         pub.publish(marker)
 
