@@ -30,10 +30,10 @@ ROS packages:<br />
 - visualization_msgs
 - tf
 ### PC
-putty<br />
-Winscp<br />
-Advanced IP Scanner<br />
-Win32DiskImager<br />
+putty: https://www.putty.org/ <br />
+Winscp: https://winscp.net/eng/index.php <br />
+Advanced IP Scanner: https://www.advanced-ip-scanner.com/ <br />
+Win32DiskImager: https://sourceforge.net/projects/win32diskimager/ <br />
 
 ## Relvant Links
 Raspberry Pi headless setup: https://hackernoon.com/raspberry-pi-headless-install-462ccabd75d0 <br />
