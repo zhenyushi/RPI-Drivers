@@ -49,6 +49,21 @@ psk="MyPsk"
 key_mgmt=WPA-PSK
 }
 ~~~~
+- Add the following lines to `/etc/network/interfaces`(for auto conntection, not default for Raspbian Stretch):
+~~~
+auto lo
+iface lo inet loopback
+
+iface eth0 inet manual
+
+allow-hotplug wlan0
+iface wlan0 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+allow-hotplug wlan1
+iface wlan1 inet manual
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+~~~~
 
 Show all connected I2C devices:
 ~~~
